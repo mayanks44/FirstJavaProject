@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('-----Clean-----') { 
             steps {
-                mvn clean
+                javac Employee.java
             }
         }
         stage('-----Test-----') { 
             steps {
-                mvn test
+                java Employee
             }
         }
-        stage('Package') { 
+        stage('----Result-----') { 
             steps {
-                mvn package
+                echo "Success"
             }
         }
     }
